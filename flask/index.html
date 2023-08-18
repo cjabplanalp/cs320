@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      function subscribe() {
+        var email = prompt("What is your email?", "????");
+
+        $.post({
+          type: "POST",
+          url: "email",
+          data: email,
+          contentType: "application/text; charset=utf-8",
+          dataType: "json"
+        }).done(function(data) {
+          alert(data);
+        }).fail(function(data) {
+          alert("POST failed");
+        });
+      }
+    </script>
+  </head>
+    
+  <body style="background-color:lightblue">
+    <h1>Welcome to my project!</h1>
+      <p>Data is from the World Happiness Report 2022.</p>
+      
+    <p>Click here for the data table: 
+    <a href="browse.html">data table</a></p>
+    
+    <p>Please consider making a donation here:
+    <a href="donate.html">donate!</a></p>
+    
+    <p><button onclick="subscribe()">Subscribe</button></p>
+      
+    <h4>SVG's</h4>
+        <img src="plot1.svg"><br><br>
+        <img src="plot2.svg"><br><br>
+        <img src="plot1.svg?cmap=Explained by: Perceptions of corruption"><br><br>
+  </body>
+</html>
