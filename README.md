@@ -2,6 +2,8 @@
 
 Class repository: https://github.com/cs320-wisc/s22/tree/main
 
+Class website: https://tyler.caraza-harter.com/cs320/s22/schedule.html
+
 All projects were ran from a Google Cloud VM, using Ubuntu 20.04 LTS.
 
 # Projects Overview
